@@ -114,3 +114,18 @@ class Program
         SaveLibrary();
         Console.WriteLine("Song hinzugefügt!");
     }
+        static void ListSongs()
+    {
+        if (library.Count == 0)
+        {
+            Console.WriteLine("Keine Songs vorhanden!");
+            return;
+        }
+
+        Console.WriteLine("\n--- Liste aller Songs ---");
+        for (int i = 0; i < library.Count; i++)
+        {
+            var s = library[i];
+            Console.WriteLine($"{i + 1}. {s.Title} – {s.Artist} ({s.Album}) [{s.Genre}], Dauer: {s.Duration}s");
+        }
+    }
