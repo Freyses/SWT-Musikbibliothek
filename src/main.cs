@@ -93,3 +93,24 @@ class Program
             Console.WriteLine($"Fehler beim Speichern: {ex.Message}");
         }
     }
+        static void AddSong()
+    {
+        Console.Write("Titel: ");
+        string title = Console.ReadLine();
+
+        Console.Write("Künstler: ");
+        string artist = Console.ReadLine();
+
+        Console.Write("Album: ");
+        string album = Console.ReadLine();
+
+        Console.Write("Genre: ");
+        string genre = Console.ReadLine();
+
+        Console.Write("Dauer (Sekunden): ");
+        int duration = int.Parse(Console.ReadLine());
+
+        library.Add(new Song(title, artist, album, genre, duration));
+        SaveLibrary();
+        Console.WriteLine("Song hinzugefügt!");
+    }
