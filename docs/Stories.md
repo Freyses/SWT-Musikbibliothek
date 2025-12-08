@@ -4,10 +4,10 @@ möchte ich: beim Programmstart meine gespeicherte Musik-Bibliothek laden
 um: direkt mit meinen vorhandenen Titeln arbeiten zu können  
 
 Akzeptanzkriterien
-[] Beim Start wird automatisch nach music_data.txt gesucht
-[] Vorhandene Titel werden geladen und angezeigt
-[] Falls keine Datei existiert, wird eine leere Bibliothek erstellt
-[] Erfolgsmeldung zeigt Anzahl der geladenen Titel an
+[X] Beim Start wird automatisch nach music_data.txt gesucht
+[X] Vorhandene Titel werden geladen und angezeigt
+[X] Falls keine Datei existiert, wird eine leere Bibliothek erstellt
+[X] Erfolgsmeldung zeigt Anzahl der geladenen Titel an
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -17,10 +17,10 @@ möchte ich: neue Songs mit allen Metadaten zur Bibliothek hinzufügen
 um: meine Sammlung zu erweitern  
 
 Akzeptanzkriterien
-[] Kann Titel, Künstler, Album und Genre eingeben
-[] Titel wird sofort in der Bibliothek gespeichert
-[] Erfolgsmeldung bestätigt das Hinzufügen
-[] Titel ist sofort in "Alle Titel anzeigen" sichtbar
+[X] Kann Titel, Künstler, Album und Genre eingeben
+[X] Titel wird sofort in der Bibliothek gespeichert
+[X] Erfolgsmeldung bestätigt das Hinzufügen
+[X] Titel ist sofort in "Alle Titel anzeigen" sichtbar
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -30,10 +30,10 @@ möchte ich: eine Übersicht aller Titel in meiner Bibliothek sehen
 um: schnell den Inhalt meiner Sammlung zu überblicken  
 
 Akzeptanzkriterien:
-[] Alle Titel werden nummeriert angezeigt
-[] Zu jedem Titel werden alle Metadaten angezeigt
-[] Bei leerer Bibliothek erscheint Hinweis "Bibliothek ist leer"
-[] Gesamtanzahl der Titel wird angezeigt
+[X] Alle Titel werden nummeriert angezeigt
+[X] Zu jedem Titel werden alle Metadaten angezeigt
+[X] Bei leerer Bibliothek erscheint Hinweis "Bibliothek ist leer"
+[X] Gesamtanzahl der Titel wird angezeigt
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -43,11 +43,11 @@ möchte ich: nach bestimmten Titeln oder Künstlern suchen können
 um: schnell bestimmte Musikstücke zu finden  
 
 Akzeptanzkriterien:
-[] Suche in Titel, Künstler, Album und Genre
-[] Groß-/Kleinschreibung wird ignoriert
-[] Teile von Wörtern können gesucht werden
-[] Suchergebnisse werden nummeriert angezeigt
-[] Bei keinem Treffer erscheint "Keine Titel gefunden"
+[X] Suche in Titel, Künstler, Album und Genre
+[X] Groß-/Kleinschreibung wird ignoriert
+[X] Teile von Wörtern können gesucht werden
+[X] Suchergebnisse werden nummeriert angezeigt
+[X] Bei keinem Treffer erscheint "Keine Titel gefunden"
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -57,11 +57,11 @@ möchte ich: Fehler in den Metadaten korrigieren können
 um: meine Bibliothek akkurat zu halten  
 
 Akzeptanzkriterien:
-[] Kann Titel über Nummer auswählen
-[] Alle Metadaten-Felder sind änderbar
-[] Leere Eingabe lässt Feld unverändert
-[] Vorher-Nachher-Anzeige der Änderungen
-[] Änderungen werden sofort gespeichert
+[X] Kann Titel über Nummer auswählen
+[X] Alle Metadaten-Felder sind änderbar
+[X] Leere Eingabe lässt Feld unverändert
+[X] Vorher-Nachher-Anzeige der Änderungen
+[X] Änderungen werden sofort gespeichert
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -71,11 +71,11 @@ möchte ich: Titel aus der Bibliothek entfernen können
 um: meine Sammlung aktuell zu halten  
 
 Akzeptanzkriterien:
-[] Titel kann über Nummer ausgewählt werden
-[] Löschvorgang erfordert Bestätigung
-[] Gelöschter Titel wird vorher angezeigt
-[] Titel wird dauerhaft entfernt
-[] Änderung wird sofort gespeichert
+[X] Titel kann über Nummer ausgewählt werden
+[X] Löschvorgang erfordert Bestätigung
+[X] Gelöschter Titel wird vorher angezeigt
+[X] Titel wird dauerhaft entfernt
+[X] Änderung wird sofort gespeichert
 
 -----------------------------------------------------------------------------------------------------------
 
@@ -85,8 +85,8 @@ möchte ich: durch ein klares Menü durch das Programm geführt werden
 um: mich nicht mit komplexen Befehlen auseinandersetzen zu müssen  
 
 Akzeptanzkriterien:
-[] Hauptmenü zeigt alle Optionen klar an
-[] Fehleingaben werden abgefangen mit Hinweis
-[] Nach jeder Aktion kehrt Programm zum Hauptmenü zurück
-[] Beenden ist jederzeit möglich
+[X] Hauptmenü zeigt alle Optionen klar an
+[X] Fehleingaben werden abgefangen mit Hinweis
+[X] Nach jeder Aktion kehrt Programm zum Hauptmenü zurück
+[X] Beenden ist jederzeit möglich
 
