@@ -114,3 +114,107 @@ class Program
         SaveLibrary();
         Console.WriteLine("Song hinzugefügt!");
     }
+static void SearchSongs()
+    {
+        if (songs.Count == 0)
+        {
+            Console.WriteLine("Die Bibliothek ist leer.");
+            return;
+        }
+        Console.Write("Suchbegriff: ");
+        string search = Console.ReadLine().ToLower();
+        Console.WriteLine("\n--- Suchergebnisse ---");
+        bool found = false;
+
+        foreach (var song in songs)
+        {
+            if (song.Title.ToLower().Contains(search) || song.Artist.ToLower().Contains(search) ||
+                song.Album.ToLower().Contains(search) || song.Genre.ToLower().Contains(search))
+            {
+                song.Display();
+                found = true;
+            }
+        }
+        if (!found) Console.WriteLine("Keine Titel gefunden.");
+    }
+
+    static void RemoveSong()
+    {
+        if (songs.Count == 0)
+        {
+            Console.WriteLine("Die Bibliothek ist leer.");
+            return;
+        }
+        ShowAllSongs();
+        Console.Write("Welchen Titel löschen? (Nummer): ");
+        
+        if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= songs.Count)
+        {
+            Console.Write("Lösche: ");
+            songs[index - 1].Display();
+            Console.Write("Wirklich löschen? (j/n): ");
+            string confirmation = Console.ReadLine();
+
+            if (confirmation.ToLower() == "j")
+            {
+                songs.RemoveAt(index - 1);
+                SaveLibrary();
+                Console.WriteLine("Titel wurde gelöscht!");
+            }
+            else
+            {
+                Console.WriteLine("Löschvorgang abgebrochen.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Ungültige Nummer!");
+        }
+    }
+
+    static void UpdateSong()
+    {
+        if (songs.Count == 0)
+        {
+            Console.WriteLine("Die Bibliothek ist leer.");
+            return;
+        }
+        ShowAllSongs();
+        Console.Write("Welchen Titel bearbeiten? (Nummer): ");
+        
+        if (int.TryParse(Console.ReadLine(), out int index) && index >= 1 && index <= songs.Count)
+        {
+            Song song = songs[index - 1];
+            Console.Write("Aktuelle Daten: ");
+            song.Display();
+
+            Console.Write("Neuer Titel (leer lassen für unverändert): ");
+            string input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input)) song.Title = input;
+
+            Console.Write("Neuer Künstler (leer lassen für unverändert): ");
+            input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input)) song.Artist = input;
+
+            Console.Write("Neues Album (leer lassen für unverändert): ");
+            input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input)) song.Album = input;
+
+            Console.Write("Neues Genre (leer lassen für unverändert): ");
+            input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input)) song.Genre = input;
+
+            Console.Write("Neue Dauer (leer lassen für unverändert): ");
+            input = Console.ReadLine();
+            if (!string.IsNullOrEmpty(input) && int.TryParse(input, out int newDuration))
+                song.Duration = newDuration;
+
+            SaveLibrary();
+            Console.WriteLine("Titel wurde aktualisiert!");
+        }
+        else
+        {
+            Console.WriteLine("Ungültige Nummer!");
+        }
+    }
+}
