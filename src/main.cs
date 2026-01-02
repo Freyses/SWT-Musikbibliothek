@@ -13,7 +13,7 @@ namespace MusicLibraryApp
         public string Genre { get; set; } = "";
         public int Duration { get; set; }
 
-        public Song() { } // für JSON
+
 
         public Song(string title, string artist, string album, string genre, int duration)
         {
@@ -86,7 +86,7 @@ namespace MusicLibraryApp
                 string json = _fs.ReadAllText(DataFile);
                 var loaded = JsonSerializer.Deserialize<List<Song>>(json);
 
-                // Fix für den Null-Fall (disjunktiver Test L4)
+               
                 Songs = loaded ?? new List<Song>();
 
                 _console.WriteLine($"Bibliothek geladen! ({Songs.Count} Titel)");
@@ -127,7 +127,7 @@ namespace MusicLibraryApp
             _console.Write("Dauer (Sekunden): ");
             string durationInput = _console.ReadLine() ?? "";
 
-            // Fix: keine Exceptions mehr; disjunktiv testbar
+          
             if (!int.TryParse(durationInput, out int duration))
             {
                 _console.WriteLine("Ungültige Dauer!");
@@ -259,4 +259,37 @@ namespace MusicLibraryApp
             }
         }
     }
+    class Program
+{
+    static void Main()
+        {
+        IConsole console = new SystemConsole();
+        IFileSystem fs = new SystemFileSystem();
+
+        var app = new LibraryApp(console, fs, "library.json");
+        app.LoadLibrary();
+
+        while (true)
+        {
+            console.WriteLine("\n--- Musikbibliothek ---");
+            console.WriteLine("1) Song hinzufügen");
+            console.WriteLine("2) Songs suchen");
+            console.WriteLine("3) Alle Songs anzeigen");
+            console.WriteLine("4) Song löschen");
+            console.WriteLine("5) Song bearbeiten");
+            console.WriteLine("0) Beenden");
+            console.Write("Auswahl: ");
+
+            string input = console.ReadLine() ?? "";
+
+            if (input == "0") break;
+            if (input == "1") app.AddSong();
+            else if (input == "2") app.SearchSongs();
+            else if (input == "3") app.ShowAllSongs();
+            else if (input == "4") app.RemoveSong();
+            else if (input == "5") app.UpdateSong();
+            else console.WriteLine("Ungültige Eingabe!");
+        }
+    }
+}
 }
