@@ -261,8 +261,16 @@ namespace MusicLibraryApp
     }
     class Program
 {
-    static void Main()
+    static void Main(string[] args)
         {
+
+        if (args.Length > 0 && args[0].ToLower() == "test")
+            {
+                int exitCode = MusicLibraryAppTests.MusikbibTests.RunAll();
+                Environment.Exit(exitCode);
+                return;
+            }
+
         IConsole console = new SystemConsole();
         IFileSystem fs = new SystemFileSystem();
 
