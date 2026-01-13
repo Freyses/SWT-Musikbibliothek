@@ -23,9 +23,8 @@ Programm im Projektverzeichnis ausführen:
   Startet die Anwendung im "Normalen" Modus
 
 --Tests ausführen--
-
 Die Tests werden über ein Startargument gestartet:
-Befeh: dotnet run -- test
+Befehl: dotnet run -- test
 
 Dabei wird in der Main-Methode die Testausführung aufgerufen und das Programm anschließend beendet.
 
@@ -36,7 +35,7 @@ Dabei wird in der Main-Methode die Testausführung aufgerufen und das Programm a
 -library.json
 
 --Autor--
-Lennart Michel
+Lennart Michel,
 Florian Werner
 
 
