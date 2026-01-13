@@ -17,31 +17,38 @@ Die Musikbibliotheksanwendung speichert Songs lokal und wird vollständig über 
 
 --Überprüfung der Installation--
 
-Befehl: dotnet --version
+Befehl: 
+dotnet --version
 
 Programm im Projektverzeichnis ausführen:
+
   Normale Ausführung:
   
-  Befehl:  dotnet run
+  Befehl:
+  dotnet run
   
   Startet die Anwendung im "Normalen" Modus
   
 --Tests ausführen--
 
 Die Tests werden über ein Startargument gestartet:
-Befehl: dotnet run -- test
 
-Dabei wird in der Main-Methode die Testausführung aufgerufen und das Programm anschließend beendet.
+  Befehl: 
+	
+  dotnet run -- test
+
+Dabei wird in der Main Methode die Testausführung aufgerufen und das Programm anschließend beendet.
 
 --Dateien--
 
 - main.cs 
 - MusikbibTests.cs
--library.json
+- library.json
 
 --Autor--
 
-Lennart Michel,
+Lennart Michel
+
 Florian Werner
 
 
