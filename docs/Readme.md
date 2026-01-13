@@ -18,6 +18,7 @@ Die Musikbibliotheksanwendung speichert Songs lokal und wird vollständig über 
 --Überprüfung der Installation--
 
 Befehl: 
+
 dotnet --version
 
 Programm im Projektverzeichnis ausführen:
