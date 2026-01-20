@@ -4,7 +4,7 @@ möchte ich: beim Programmstart meine gespeicherte Musik-Bibliothek laden
 um: direkt mit meinen vorhandenen Titeln arbeiten zu können  
 
 Akzeptanzkriterien
-[X] Beim Start wird automatisch nach music_data.txt gesucht
+[X] Beim Start wird automatisch nach library.json gesucht
 [X] Vorhandene Titel werden geladen und angezeigt
 [X] Falls keine Datei existiert, wird eine leere Bibliothek erstellt
 [X] Erfolgsmeldung zeigt Anzahl der geladenen Titel an
